@@ -1,0 +1,51 @@
+
+
+html, body { height: 100%; margin: 0;  overflow: hidden;}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Aplica la transición en cualquier elemento con la clase "efecto-hover" */
+.efecto-hover {
+  overflow: hidden !important; /* Oculta el contenido que se desborda del contenedor */
+
+  transition-duration: 0.2s; /* Duración de la transición */
+
+}
+
+/* Aplica la elevación al pasar el cursor sobre cualquier elemento con la clase "efecto-hover" */
+.efecto-hover:hover {
+  overflow-y: hidden !important;
+  transform: scale(1.05); /* Escala el elemento al 105% */
+}
+
+.color-primario {
+  color: white !important; /* Color primario */
+  /*background-color: #161616 !important;  Color de fondo primario */
+  background-color: #000000 !important;  /* Color de fondo primario */
+}
+
+
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+  width: 8px !important; /* Ancho del scrollbar */
+}
+
+/* Estilo del pulgar del scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 8, 8) !important; /* Color del pulgar */
+  border-radius: 6px !important; /* Borde redondeado */
+}
+
+:root {
+  --verde: #0c740c; /* Puedes usar el formato hexadecimal */
+}
+
+.borde-rojo{
+  /* border: 1px solid rgba(255, 0, 0, 0.5) !important; */
+}
+.borde-rojo:focus{
+  border: 1px solid #a30909  !important;
+
+}
+.box-shadow-rojo:focus{
+  box-shadow: 0 0 5px 0 #a30909  !important;
+}

@@ -1,0 +1,120 @@
+
+.router-container {
+  height: 100vh; /* 100% del viewport height */
+  /* overflow-x: auto; */
+  /* background-color: #a30909; */
+}
+.menu-item {
+  background-color: #161616;
+  color: white;
+}
+.item-user{
+  height: 50px;
+
+}
+.toolbar-principal{
+  height: 80px !important;
+}
+.items-sidenav{
+  padding: 5px !important; margin: 10px;
+}
+
+
+.mat-expansion-panel{
+  margin: 5px !important;
+  background-color: rgb(218, 82, 82);
+}
+
+div.mat-expansion-panel-body {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+
+}
+
+.submenu-item:hover{
+  background-color: #a3090918;
+  color: #a30909;
+  border: 1px solid #a3090994;
+  border-radius: 5px;
+}
+.user-panel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-circle {
+  width: 50px !important;
+  height: 50px !important;
+}
+.image{
+  width: 30% !important;
+}
+.info-user{
+  width:70% !important;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 2px;
+}
+.text-user-name{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.text-user-name:hover{
+  color: #a30909;
+
+}
+.mat-expansion-panel-header:hover mat-panel-title {
+  color: #a30909;
+}
+
+.hr-item{
+  height: 12px; color:whitesmoke; width: 300px;
+}
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+/* MEDIAQUERYS PARA PANTALLAS MOVILES*/
+@media (max-width: 768px) {
+ .sidenav{
+    width: 250px !important;
+    overflow-x: scroll; /* Añadir scroll horizontal si es necesario */
+    border-bottom: 1px solid red; /* Línea roja en la parte inferior */
+    /* padding-bottom: 200px !important; */
+    height: 100vh;
+ }
+ .hr-item{
+    height: 12px; color:whitesmoke; width: 240px;
+  }
+  .text-user-name{
+    font-size: 18px;
+  }
+}
+@media (max-width: 568px) {
+  .sidenav{
+     width: 260px !important;
+
+     height: 100dvh !important; /* 100% del viewport height ESTE FUNCIONA MEJOR PARA LOS ELEMENTOS */
+     overflow-x: hidden !important; /* Añadir scroll horizontal si es necesario */
+     border-bottom: 1px solid red; /* Línea roja en la parte inferior */
+  }
+  .container-menu-items{
+    margin-bottom: 500px;
+  }
+  .hr-item{
+     height: 12px; color:whitesmoke; width: 240px;
+   }
+   .text-user-name{
+     font-size: 18px;
+   }
+
+   .toolbar-principal{
+    height: 80px !important;
+   }
+ }

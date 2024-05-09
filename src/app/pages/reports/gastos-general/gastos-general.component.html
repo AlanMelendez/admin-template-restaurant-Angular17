@@ -1,0 +1,87 @@
+<div class="container-all">
+
+
+  <div class="mat-elevation-z8">
+
+    <div class="demo-button-container">
+      <mat-form-field class="buscador-ticket buscador-item">
+        <input matInput (keyup)="applyFilter($event.target)" placeholder="Buscar:">
+      </mat-form-field>
+
+      <div class="">
+        <button (click)="downloadPDF()" mat-raised-button class="botones-acciones rojo" >
+          PDF <i class="fas fa-download ml-3"></i>
+        </button>
+      </div>
+      <div class="">
+        <button (click)="downloadExcel()" mat-raised-button class="botones-acciones verde" [color]="verde">
+          EXCEL <i class="fas fa-download ml-3"></i>
+        </button>
+      </div>
+
+
+      <div class="form-floating buscador-ticket">
+          <input type="date" class="form-control box-shadow-rojo borde-rojo">
+          <label for="floatingSelect">Fecha Inicial</label>
+      </div>
+
+      <div class="form-floating buscador-ticket">
+        <input type="date" class="form-control box-shadow-rojo borde-rojo  ">
+        <label for="floatingSelect">Fecha Final</label>
+      </div>
+
+      <div class="form-floating buscador-ticket">
+        <select class="form-select box-shadow-rojo borde-rojo" id="floatingSelect" aria-label="Floating label select example">
+          <option selected class="backround-rojo">Todas</option>
+          <option class="backround-rojo" value="1">One</option>
+          <option class="backround-rojo" value="2">Two</option>
+          <option class="backround-rojo" value="3">Three</option>
+        </select>
+        <label for="floatingSelect">Selecciona Sucursal</label>
+      </div>
+    </div>
+    <table id="my-table" mat-table [dataSource]="dataSource" matSort >
+
+      <ng-container matColumnDef="FechaHora">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha y Hora</th>
+        <td mat-cell *matCellDef="let row"> {{ row.FechaHora }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="TipoGasto">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Tipo de Gasto</th>
+        <td mat-cell *matCellDef="let row"> {{ row.TipoGasto }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ImporteTotal">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Importe Total</th>
+        <td mat-cell *matCellDef="let row"> {{ row.ImporteTotal | currency}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalCost('ImporteTotal') | currency}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Provedor">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Proveedor</th>
+        <td mat-cell *matCellDef="let row"> {{ row.Provedor }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Motivo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Motivo</th>
+        <td mat-cell *matCellDef="let row"> {{ row.Motivo }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+
+    </table>
+
+    <mat-paginator pageSize="10" [pageSizeOptions]="[5, 10, 25, 100]" class="items-center" ></mat-paginator>
+  </div>
+  <app-banner-publicitario></app-banner-publicitario>
+
+</div>

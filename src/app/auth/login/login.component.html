@@ -1,0 +1,67 @@
+<section class="h-100 gradient-form" style="background-color: #eee; overflow: hidden;">
+  <div class="container py-5 h-100 efecto-hover" >
+    <div class="row d-flex justify-content-center align-items-center h-100 animate__animated animate__backInUp " >
+      <div class="col-xl-10"  style="background-color: transparent;">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0 box-shadows" style="margin: 0px;">
+            <div class="col-lg-6" >
+              <div class="card-body p-md-5 mx-md-4" >
+
+                <div class="text-center mt-5 ">
+                  <img src="./assets/img/LOGO_GENERAL.png"
+                    style="width: 270px;" alt="logo">
+                  <h4 class="mt-2 mb-5 pb-1" [style.font-size]="titulosize">{{titulo}}</h4>
+                </div>
+
+                <form>
+                  <div class="flex text-center">
+                    <p>Ingresa tus datos de cliente.</p>
+
+                  </div>
+                  <mat-form-field appearance="outline"  class="example-full-width">
+                    <mat-label >Ingresa ID:</mat-label>
+                    <input type="number" matInput placeholder="Ej. 29XXX" >
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline"  class="example-full-width">
+                    <mat-label>Ingresa Usuario:</mat-label>
+                    <input type="email" matInput placeholder="Ej. example@user.com">
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline"  class="example-full-width">
+                    <mat-label>Ingresa Password:</mat-label>
+                    <input type="password" matInput placeholder="Ej. example@user.com">
+                  </mat-form-field>
+
+
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button mat-flat-button color="primary" style="width: 250px;" class="p-4" routerLink="/dashboard">Ingresar</button>
+                  </div>
+
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="container-right">
+
+              </div> <!-- Contenedor para la imagen de fondo con el filtro -->
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4 texto-encima">
+                <h4 class="mb-4 text-bold">Simplifica la gestión de tu negocio de forma eficiente.</h4>
+                <p class="small mb-0 text-justify">Mejora la administración de tu restaurante con nuestro software especialmente diseñado para dueños, gerentes, cajeros y meseros.
+                  <br>
+
+                  Ideal para llevar el control de tus ventas, mesas, comandas, almacén, recetas, meseros y mucho más.</p>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

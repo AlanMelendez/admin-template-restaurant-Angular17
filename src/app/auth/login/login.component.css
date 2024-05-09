@@ -1,0 +1,60 @@
+  mat-form-field {
+    width: 100% !important;
+  }
+
+  .box-shadows {
+    box-shadow: 4px 3px 59px 16px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 3px 59px 16px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 59px 16px rgba(0, 0, 0, 0.75);
+
+    box-shadow: 4px 3px 64px 5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 3px 64px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 64px 5px rgba(0, 0, 0, 0.75);
+  }
+
+  .container-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/img/Caja3_sinmarca.png');
+    background-color: rgba(255, 0, 0, 0);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0.4);
+    color: white;
+  }
+
+  .texto-encima {
+    position: relative;
+    background-color: rgba(255, 0, 0, 0);
+  }
+
+
+  @media (min-width: 768px) {
+    .gradient-form {
+      height: 100vh !important;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .gradient-custom-2 {
+      border-top-right-radius: .3rem;
+      border-bottom-right-radius: .3rem;
+    }
+  }
+
+  /*** MEDIA QUERY PARA TELEFONOS ***/
+  @media (max-width: 568px) {
+    .texto-encima{
+      display: none;
+    }
+    .box-shadows {
+      box-shadow: 4px 3px 59px 16px rgba(0, 0, 0, 0);
+      -webkit-box-shadow: 4px 3px 59px 16px rgba(0, 0, 0, 0);
+      -moz-box-shadow: 4px 3px 59px 16px rgba(0, 0, 0, 0);
+    }
+  }

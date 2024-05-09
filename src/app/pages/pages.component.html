@@ -1,0 +1,140 @@
+
+    <mat-sidenav-container class="sidenav-container  " >
+      <mat-sidenav
+        #drawer
+        class="sidenav color-primario  "
+        style="width: 300px; padding: 5px;"
+        #sidenav
+        opened
+
+
+      >
+        <mat-toolbar class="color-primario " style="
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+      ">
+          <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+          "
+        >
+          <img
+            src="./assets/img/LOGO_GENERAL.png"
+            alt="AdminLTE Logo"
+            style="opacity: 0.8; width: 150px"
+          />
+        </div>
+
+
+
+
+
+        </mat-toolbar>
+        <!-- CREAMOS UN NAV LIST CON DROPDWON CADA UNO -->
+        <hr class="hr-item">
+
+        <div class="user-panel ">
+          <div class="image">
+            <img
+              src="./assets/dist/img/user2-160x160.jpg"
+              class="img-circle elevation-2"
+              alt="User Image"
+            />
+          </div>
+          <div class="info-user">
+            <a class="text-user-name">{{ nombreUsuario }}</a>
+          </div>
+        </div>
+
+
+
+        <hr class="hr-item">
+
+
+        <mat-nav-list>
+          <mat-expansion-panel  class="items-sidenav">
+
+            <mat-expansion-panel-header>
+              <mat-panel-title routerLink="/dashboard/Inicio" routerLinkActive="active">
+               <i class="fas fa-tachometer-alt ml-1" style="margin-right: 10px;"></i>
+                INICIO
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <!-- CREAMOS EL ELEMENTO-->
+            <mat-list>
+              <mat-list-item class="submenu-item" routerLink="/dashboard/Inicio"  routerLinkActive="active"style="cursor: pointer; padding: 0; margin: 0; margin-bottom: 10px; padding-left: 15px;" (click)="sidenav.close()">
+                <span mat-line>Ver Dashboard</span>
+              </mat-list-item>
+            </mat-list>
+
+          </mat-expansion-panel>
+          <ng-container *ngFor="let item of menuItems" class="">
+
+            <mat-expansion-panel *ngIf="submenus[item.titulo]" class="items-sidenav" id="bodyPanel" >
+              <mat-expansion-panel-header>
+
+
+                <mat-panel-title>
+                  <i class="{{ item.icono }}" style="margin-right: 10px;"></i>
+                  {{ item.titulo }}
+                </mat-panel-title>
+
+              </mat-expansion-panel-header>
+
+              <mat-list>
+                <mat-list-item class="submenu-item" *ngFor="let subMenuItem of item.submenu" routerLink="{{ subMenuItem.url }}" style="cursor: pointer; padding: 0; margin: 0; margin-bottom: 10px; padding-left: 15px;" (click)="sidenav.close()">
+                  <span mat-line>{{ subMenuItem.titulo }}</span>
+                </mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+          </ng-container>
+        </mat-nav-list>
+
+      </mat-sidenav>
+
+      <mat-sidenav-content >
+        <mat-toolbar class="color-primario toolbar-principal" style="">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" >
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <div
+          style="
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+          "
+        >
+          <img
+            src="./assets/img/LOGO_GENERAL.png"
+            alt="AdminLTE Logo"
+            style="opacity: 0.8; width: 150px"
+          />
+        </div>
+        </mat-toolbar>
+        <div class="router-container">
+          <router-outlet></router-outlet>
+
+        </div>
+
+
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+
+

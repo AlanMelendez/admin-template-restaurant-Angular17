@@ -1,0 +1,149 @@
+
+.container-all{
+ width: 100% !important;
+ height: 100% !important;
+ overflow-y: scroll !important;
+ padding-top: 20px;
+  padding-bottom: 100px;
+ padding-left: 100px;
+ padding-right: 100px;
+
+}
+
+table {
+  width: 100%;
+}
+ option:hover {
+  background-color:  #a30909 !important; /* Cambiar el color al pasar el mouse */
+}
+/* select:focus option {
+  background-color: #a30909 !important;
+  color: white !important;
+} */
+
+td.mat-column-star {
+  width: 20px;
+  padding-right: 8px;
+}
+
+th.mat-column-position, td.mat-column-position {
+  padding-left: 8px;
+  --color: #a3090994 !important;
+
+}
+
+.mat-mdc-table-sticky-border-elem-right {
+  border-left: 1px solid #e0e0e0;
+}
+
+.mat-mdc-table-sticky-border-elem-left {
+  border-right: 1px solid #e0e0e0;
+}
+
+.items-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mat-elevation-z8 {
+  overflow-x: auto !important;
+ }
+ tr.mat-mdc-footer-row {
+  font-weight: bold;
+
+
+}
+
+.mat-mdc-table-sticky {
+  border-top: 1px solid #e0e0e0;
+}
+.demo-button-container{
+  width: 100% !important;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.botones-acciones{
+  width: 150px;
+  padding: 26px;
+  margin: 10px;
+}
+.buscador-ticket{
+  width: 300px;
+  margin: 10px;
+}
+
+.rojo{
+  --color:white !important;
+  --background-color: #a30909 !important;
+  color: white !important;
+  background-color: #a30909 !important;
+}
+.verde{
+  background-color: #0c7e0f !important;
+  color: white !important;
+  --background-color: #0c7e0f !important;
+  --color: white !important;
+}
+
+
+.mat-header-row {
+  --background-color: #005173 !important;
+}
+/*? CAMBIAR COLOR DE LAS CELDAS DE LA TABLA  */
+th.mat-sort-header {
+  color: #a30909 !important;
+}
+
+:host ::ng-deep .mat-sort-header-arrow {
+  color: #a30909 !important;
+}
+
+.buscador-item{
+  padding-top: 10px !important;
+}
+
+/* CREAMOS EL MEDIAQUERY PARA LOS DISPOSITIVOS MOVILES */
+@media (max-width: 646px) {
+  .mat-elevation-z8 {
+    overflow-x: scroll !important;
+   }
+   /* .demo-button-container{
+    overflow-x: scroll !important;
+
+   } */
+  .container-all{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 250px !important;
+    overflow-y: scroll !important;
+  }
+  .mat-form-field {
+    font-size: 12px;
+  }
+  .mat-column-star {
+    width: 10px;
+    padding-right: 8px;
+  }
+  th.mat-column-position, td.mat-column-position {
+    padding-left: 8px;
+  }
+  .items-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .demo-button-container{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .botones-acciones{
+    width: 300px;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,118 @@
+<div class="container-all">
+
+
+  <div class="mat-elevation-z8">
+
+    <div class="demo-button-container">
+      <mat-form-field class="buscador-ticket buscador-item">
+        <input matInput (keyup)="applyFilter($event.target)" placeholder="Buscar:">
+      </mat-form-field>
+
+      <div class="">
+        <button (click)="downloadPDF()" mat-raised-button class="botones-acciones rojo" >
+          PDF <i class="fas fa-download ml-3"></i>
+        </button>
+      </div>
+      <div class="">
+        <button (click)="downloadExcel()" mat-raised-button class="botones-acciones verde" [color]="verde">
+          EXCEL <i class="fas fa-download ml-3"></i>
+        </button>
+      </div>
+
+
+      <div class="form-floating buscador-ticket">
+          <input type="date" class="form-control box-shadow-rojo borde-rojo">
+          <label for="floatingSelect">Fecha Inicial</label>
+      </div>
+
+      <div class="form-floating buscador-ticket">
+        <input type="date" class="form-control box-shadow-rojo borde-rojo  ">
+        <label for="floatingSelect">Fecha Final</label>
+      </div>
+
+      <div class="form-floating buscador-ticket">
+        <select class="form-select box-shadow-rojo borde-rojo" id="floatingSelect" aria-label="Floating label select example">
+          <option selected class="backround-rojo">Todas</option>
+          <option class="backround-rojo" value="1">One</option>
+          <option class="backround-rojo" value="2">Two</option>
+          <option class="backround-rojo" value="3">Three</option>
+        </select>
+        <label for="floatingSelect">Selecciona Sucursal</label>
+      </div>
+    </div>
+    <table id="my-table" mat-table [dataSource]="dataSource" matSort >
+
+
+
+      <ng-container matColumnDef="NombreCategoria">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre de Categoría</th>
+        <td mat-cell *matCellDef="let row"> {{ row.NombreCategoria }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="NombreProducto">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre de Producto</th>
+        <td mat-cell *matCellDef="let row"> {{ row.NombreProducto }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="TipoProducto">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Tipo de Producto</th>
+        <td mat-cell *matCellDef="let row"> {{ row.TipoProducto }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Seccion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Sección</th>
+        <td mat-cell *matCellDef="let row"> {{ row.Seccion }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Costo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Costo</th>
+        <td mat-cell *matCellDef="let row"> {{ row.Costo | currency }} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalCost('Costo') | currency}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Venta">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Venta</th>
+        <td mat-cell *matCellDef="let row"> {{ row.Venta | currency }} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalCost('Venta') | currency}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Existencia">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Existencia</th>
+        <td mat-cell *matCellDef="let row"> {{ row.Existencia }} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalCost('Costo') | currency}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Importe">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Importe</th>
+        <td mat-cell *matCellDef="let row"> {{ row.Importe | currency }} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalCost('Importe') | currency}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="MinimoRequerido">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Mínimo Requerido</th>
+        <td mat-cell *matCellDef="let row"> {{ row.MinimoRequerido }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="MaximoPermitido">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Máximo Permitido</th>
+        <td mat-cell *matCellDef="let row"> {{ row.MaximoPermitido }} </td>
+        <td mat-footer-cell *matFooterCellDef> </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+
+    </table>
+
+    <mat-paginator pageSize="10" [pageSizeOptions]="[5, 10, 25, 100]" class="items-center" ></mat-paginator>
+  </div>
+  <app-banner-publicitario></app-banner-publicitario>
+
+</div>

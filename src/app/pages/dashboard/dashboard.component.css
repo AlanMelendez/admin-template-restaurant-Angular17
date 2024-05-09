@@ -1,0 +1,127 @@
+
+/**! Importante poner el height en 900 para que no se pierda el estilo en las pantallas */
+
+.container-all{
+  display: block;
+ height: 100% !important;
+ overflow: auto !important;
+
+}
+.container-charts{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+.card{
+  width: 800px !important;
+  height: 400px !important;
+  margin: 50px;
+
+  /* box-shadow: 0px 3px 30px -3px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 3px 30px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 30px -3px rgba(0,0,0,0.75); */
+}
+.card-header{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: #a30909 !important;
+
+  padding: 10px !important;
+  background-color: white !important;
+
+}
+.card-title{
+  text-shadow: #a30909;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  text-shadow: -1px 4px 13px rgba(0,0,0,0.29);
+}
+
+.canvas-chart{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.card-body{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+}
+.chart-canvas{
+  width: 300px !important; height: 300px !important;
+}
+.container-info-box{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px !important;
+  padding-right: 130px;
+}
+.info-box{
+  width: 50% !important;
+  margin: 20px 10px 20px 10px !important;
+  padding: 10px !important;
+}
+.info-box-content{
+
+}
+.ventasMesero{
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.ventasMesero .card{
+  width: 1500px !important;
+  height: 600px !important;
+}
+
+/*? Media querys para los telefonos */
+@media (max-width: 768px) {
+  .container-all{
+    padding: 10px !important;
+  }
+  .container-charts{
+    padding: 10px;
+  }
+  .card{
+    width: 100% !important; height: 100% !important;
+    margin: 20px !important;
+    box-shadow: 0px 3px 30px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 30px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 30px -3px rgba(0,0,0,0.75);
+  }
+  .card-title{
+    text-shadow: #a30909;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    text-shadow: -1px 4px 13px rgba(0,0,0,0.29);
+  }
+
+  .container-charts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .container-info-box{
+    margin-top: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px;
+    flex-direction: column-reverse;
+  }
+  .info-box{
+    width: 100% !important;
+    margin: 10px 10px 10px 10px !important;
+
+  }
+
+  .ventasMesero .card{
+    width: 100% !important;
+    height: auto !important;
+  }
+}

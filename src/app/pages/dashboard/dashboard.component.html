@@ -1,0 +1,174 @@
+ <!-- Main content -->
+<div class="container-all" >
+
+  <div class="container-fluid container-charts container-info-box ">
+    <div class="info-box ">
+      <span class="info-box-icon bg-info elevation-1"><i class="fas fa-money-bill "></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">VENTAS</span>
+        <span class="info-box-number">
+          $10,768
+          <!-- <small>%</small> -->
+        </span>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-shopping-cart "></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">GASTOS Y COMPRAS</span>
+        <span class="info-box-number">$41,410</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+
+    <div class="info-box">
+      <span class="info-box-icon bg-success elevation-1"><i class="fas fa-trash"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">PRODUCTOS CANCELADOS</span>
+        <span class="info-box-number">760</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <div class="info-box">
+      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">CORTESIAS</span>
+        <span class="info-box-number">50</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+    <div class="info-box">
+      <span class="info-box-icon bg-pink elevation-1"><i class="fas fa-store"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">SUCURSAL</span>
+        <select class="form-select">
+          <option value="1">Sucursal 1</option>
+          <option value="2">Sucursal 2</option>
+          <option value="3">Sucursal 3</option>
+          <option value="4">Sucursal 4</option>
+        </select>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+  </div>
+
+
+
+
+  <div class=" container-fluid container-charts">
+    <div class="card " id="CdoughnutChart">
+      <div class="card-header">
+        <h3 class="card-title">Mesas Ocupadas</h3>
+
+        <div class="card-tools">
+
+        </div>
+      </div>
+      <div class="card-body" >
+        <canvas id="doughnutChart" class="chart-canvas"></canvas>
+      </div>
+      <!-- /.card-body -->
+    </div>
+
+    <div class="card ">
+      <div class="card-header">
+        <h3 class="card-title">Cuentas Abiertas</h3>
+
+        <div class="card-tools">
+
+        </div>
+      </div>
+      <div class="card-body"  id="cardcuentasAbiertas" >
+        <canvas id="cuentasAbiertas" class="canvas-chart" ></canvas>
+      </div>
+      <!-- /.card-body -->
+    </div>
+
+  </div>
+  <div class="container-fluid container-charts ventasPorHora" >
+    <div class="card ">
+      <div class="card-header">
+        <h3 class="card-title">Ventas Por Hora</h3>
+
+        <div class="card-tools">
+
+        </div>
+      </div>
+      <div class="card-body"  id="CventasPorHora" >
+        <canvas id="ventasPorHora" class="canvas-chart" ></canvas>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <div class="card ">
+      <div class="card-header">
+        <h3 class="card-title">TOP 10 | Productos mas Vendidos</h3>
+
+        <div class="card-tools">
+
+        </div>
+      </div>
+      <div class="card-body"  id="Cardtop10Products" >
+        <canvas id="top10Products" class="canvas-chart" ></canvas>
+      </div>
+      <!-- /.card-body -->
+    </div>
+  </div>
+
+  <div class="container-fluid container-charts ventasPorDia" >
+    <div class="card ">
+      <div class="card-header">
+        <h3 class="card-title">Formas de Pago</h3>
+
+        <div class="card-tools">
+
+        </div>
+      </div>
+      <div class="card-body"  id="CardmetodosDePago" >
+        <canvas id="metodosDePago" class="canvas-chart" ></canvas>
+      </div>
+      <!-- /.card-body -->
+    </div>
+
+    <div class="card ">
+      <div class="card-header">
+        <h3 class="card-title">Ventas por Categoria</h3>
+
+        <div class="card-tools">
+
+        </div>
+      </div>
+      <div class="card-body"  id="cardventasCategoria" >
+        <canvas id="ventasCategoria" class="canvas-chart" ></canvas>
+      </div>
+      <!-- /.card-body -->
+    </div>
+
+  </div>
+  <div class="container-fluid container-charts ventasMesero" >
+
+    <div class="card ">
+      <div class="card-header">
+        <h3 class="card-title">Ventas por Mesero</h3>
+
+        <div class="card-tools">
+
+        </div>
+      </div>
+      <div class="card-body"  id="CardmventasPorMesero" >
+        <canvas id="ventasPorMesero" class="canvas-chart" ></canvas>
+      </div>
+      <!-- /.card-body -->
+    </div>
+  </div>
+
+
+
+</div>
+
+
